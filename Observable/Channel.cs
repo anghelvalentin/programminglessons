@@ -21,7 +21,7 @@ namespace Observable
         {
             for (int i = 0; i < subscribers.Count; i++)
             {
-                subscribers[i].Notify(message);
+                subscribers[i].OnReceiveMessage(message);
             }
         }
     }

@@ -6,6 +6,6 @@ namespace Observable
 {
     interface IObserver
     {
-        void Notify(Message message);
+        void OnReceiveMessage(Message message);
     }
 }

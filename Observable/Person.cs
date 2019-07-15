@@ -6,7 +6,7 @@ namespace Observable
 {
     class Person : IObserver
     {
-        public void Notify(Message message)
+        public void OnReceiveMessage(Message message)
         {
             Console.WriteLine($"The person received this message: {message.Text}");
         }

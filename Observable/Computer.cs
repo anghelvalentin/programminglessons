@@ -6,7 +6,7 @@ namespace Observable
 {
     class Computer : IObserver
     {
-        public void Notify(Message message)
+        public void OnReceiveMessage(Message message)
         {
             Console.WriteLine($"The computer received this message: {message.Text}");
         }
