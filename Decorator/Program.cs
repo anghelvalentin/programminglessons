@@ -13,6 +13,7 @@ namespace Decorator
 
             FaxMachine faxMachine = new FaxMachine(xeroxMachine);
             faxMachine.Print(message);
+            faxMachine.SendFax("021-433-23-22");
         }
     }
 }

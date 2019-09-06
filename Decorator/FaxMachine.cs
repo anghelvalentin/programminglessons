@@ -4,18 +4,17 @@ using System.Text;
 
 namespace Decorator
 {
-    class FaxMachine : IPrint,IFax
+    class FaxMachine : PrintDecorator,IFax
     {
-        IPrint _xeroxMachine;
-        public FaxMachine(IPrint xerox)
+        public FaxMachine(IPrint print) : base(print)
         {
-            _xeroxMachine = xerox;
         }
 
-        public void Print(string message)
+
+        public override void Print(string message)
         {
-            _xeroxMachine.Print(message);
-            Console.WriteLine("New functionality was added for xerox machine.");
+            base.Print(message);
+            Console.WriteLine("I also added some new functionality to printing");
         }
 
         public void SendFax(string adress)
